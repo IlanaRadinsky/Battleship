@@ -1,3 +1,23 @@
+require 'gosu'
+
+class GameWindow < Gosu::Window
+  def initialize
+    super 640, 480
+    self.caption = "Battleship"
+  end
+
+  def update
+  end
+
+  def draw
+  end
+end
+
+window = GameWindow.new
+window.show
+
+
+=begin
 module Game
 	@grid1 = Array.new
 end
@@ -44,3 +64,4 @@ class Player
 end
 
 player1 = Player.new(1)
+=end
