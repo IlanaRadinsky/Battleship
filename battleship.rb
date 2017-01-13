@@ -13,8 +13,8 @@ class Player
   attr_reader :score
   
   def initialize
-    @image = Gosu::Image.new("starfighter.bmp")
-    @beep = Gosu::Sample.new("beep.wav")
+    @image = Gosu::Image.new("media/starfighter.bmp")
+    @beep = Gosu::Sample.new("media/beep.wav")
     @x = @y = @vel_x = @vel_y = @angle = 0.0
     @score = 0
   end
@@ -89,12 +89,12 @@ class Tutorial < (Example rescue Gosu::Window)
     
     self.caption = "Tutorial Game"
     
-    @background_image = Gosu::Image.new("space.png", :tileable => true)
+    @background_image = Gosu::Image.new("media/space.png", :tileable => true)
     
     @player = Player.new
     @player.warp(320, 240)
     
-    @star_anim = Gosu::Image::load_tiles("star.png", 25, 25)
+    @star_anim = Gosu::Image::load_tiles("media/star.png", 25, 25)
     @stars = Array.new
     
     @font = Gosu::Font.new(20)
